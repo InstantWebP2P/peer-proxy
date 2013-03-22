@@ -12,7 +12,8 @@
   },
   "main": "index",
   "dependencies": {
-    "iwebpp.io": "latest"
+    "iwebpp.io": "latest",
+    "httpp-proxy": "latest"
   },
   "devDependencies": {
     "expect.js": "0.1.x"
