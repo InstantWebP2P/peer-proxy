@@ -5,7 +5,7 @@
   "version": "0.0.3",
   "repository": {
     "type": "git",
-    "url": "git://github.com/InstantWebP2P/node-peer-proxy.git"
+    "url": "git://github.com/InstantWebP2P/peer-proxy.git"
   },
   "engines": {
     "node": ">=0.8.0"
