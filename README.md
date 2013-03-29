@@ -1,4 +1,4 @@
 peer-proxy
 ===============
 
-Proxy web service from peer based on iwebpp.io
+Proxy web service or website from peer based on iwebpp.io
