@@ -14,10 +14,10 @@
   "dependencies": {
     "iwebpp.io": "latest",
     "httpp-proxy": "latest",
-    "express": "3.x.x",
     "commander": "~1.1.1"
   },
   "devDependencies": {
-    "expect.js": "0.1.x"
+    "expect.js": "0.1.x",
+    "connect": "~2.7.0"
   }
 }
