@@ -14,7 +14,7 @@
   "dependencies": {
     "iwebpp.io": "latest",
     "httpp-proxy": "latest",
-    "siphash": "1.0.0",
+    "siphash": "latest",
     "commander": "~1.1.1"
   },
   "devDependencies": {
