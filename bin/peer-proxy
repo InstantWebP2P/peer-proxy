@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 //
-// Please point node above to iwebpp.io/bin/xxx platform-specific executable
+// Please install node-httpp binary in your system exec dir, like /usr/bin/, /local/usr/bin/
 //
 
 var path = require('path'),
