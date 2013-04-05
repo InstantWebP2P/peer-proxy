@@ -1,4 +1,4 @@
-#!/usr/bin/env ../node_modules/iwebpp.io/bin/linux32/node
+#!/usr/bin/env node
 
 //
 // Please point node above to iwebpp.io/bin/xxx platform-specific executable
@@ -8,7 +8,7 @@ var path = require('path'),
     fs = require('fs'),
     util  = require('util'),
     argv = require('optimist').argv,
-    peerProxy = require('../index');
+    Proxy = require('../index');
 
 var help = [
     "usage: peer-proxy [options] ",

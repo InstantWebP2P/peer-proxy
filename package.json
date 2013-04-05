@@ -18,7 +18,8 @@
     "iwebpp.io": "latest",
     "httpp-proxy": "latest",
     "siphash": "latest",
-    "commander": "~1.1.1"
+    "commander": "~1.1.1",
+    "optimist": "0.3.x"
   },
   "devDependencies": {
     "expect.js": "0.1.x",
