@@ -16,9 +16,9 @@ var help = [
     "Starts a peer-proxy server using the specified command-line options",
     "",
     "options:",
-    "  -t, --target url0,url1  URL of the server the proxy will target, the multiple URLs separate by comma",
-    "  -u, --user   USER       User to drop privileges once server socket is bound",
-    "  -h, --help              You're staring at it"
+    "  -t, --target http://xxx,https://xxx  URL of the server the proxy will target, the multiple URLs separate by comma",
+    "  -u, --user   USER                    User to drop privileges once server socket is bound",
+    "  -h, --help                           You're staring at it"
 ].join('\n');
 
 if (argv.h || argv.help || Object.keys(argv).length === 2) {
@@ -28,10 +28,34 @@ if (argv.h || argv.help || Object.keys(argv).length === 2) {
 var target = argv.t || argv.target,
     user = argv.u || argv.user;
 
+
+// 
+// Check target 
+//
+var websites = [];
+
+if (target) {
+    target = target.split(',');
+    
+    target.forEach(function(t){
+        if (t.match(/https?/i)) {
+            websites.push(t);
+        } else {
+            util.puts('please input correct URL, like http://example.com');
+        }
+    });
+    
+    if (!websites.length) {
+        return util.puts(help);    
+    }
+} else {
+    return util.puts(help);
+}
+
 //
 // Create the server with the specified options
 //
-var server = new Proxy(target.split(','), function(err, proxyURL){
+var server = new Proxy(websites, function(err, proxyURL){
         console.log('Website                            Proxy URL(please open it on browser)');
         for (var k in proxyURL) {
             console.log(k+'        '+proxyURL[k]);
