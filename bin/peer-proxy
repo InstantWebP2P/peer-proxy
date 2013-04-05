@@ -16,17 +16,17 @@ var help = [
     "Starts a peer-proxy server using the specified command-line options",
     "",
     "options:",
-    "  --target url0,url1  URL of the server the proxy will target, the multiple URLs separate by comma",
-    "  --user   USER       User to drop privileges once server socket is bound",
-    "  -h, --help          You're staring at it"
+    "  -t, --target url0,url1  URL of the server the proxy will target, the multiple URLs separate by comma",
+    "  -u, --user   USER       User to drop privileges once server socket is bound",
+    "  -h, --help              You're staring at it"
 ].join('\n');
 
 if (argv.h || argv.help || Object.keys(argv).length === 2) {
   return util.puts(help);
 }
 
-var target = argv.target,
-    user = argv.user;
+var target = argv.t || argv.target,
+    user = argv.u || argv.user;
 
 //
 // Create the server with the specified options
