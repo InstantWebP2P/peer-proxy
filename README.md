@@ -33,6 +33,10 @@ Proxy web service or website from peer.
        Website                            Proxy URL(please open it)
        http://w3schools.com/        https://zfaef294477c5aa14s.fae725b2c0812dc6.vurl.iwebpp.com:51688//vtoken/eb04d54a2f9edd5d
        http://www.google.com.hk/        https://z7fd8e9e469ef6733s.fae725b2c0812dc6.vurl.iwebpp.com:51688//vtoken/eb04d54a2f9edd5d
+       
+    3. use peer-proxy binary on Linux, like  ./bin/peer-proxy -t http://www.example.com
+       Website                            Proxy URL(please open it on browser)
+       http://www.example.com        https://zc5a93bdde908a92cs.d4ddf763050ab93e.vurl.iwebpp.com:51688//vtoken/8bb975c3385f47f3
 
 ### TODO:
 
