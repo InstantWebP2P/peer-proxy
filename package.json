@@ -11,6 +11,9 @@
     "node": ">=0.8.0"
   },
   "main": "index",
+  "bin": {
+    "peer-proxy": "./bin/peer-proxy"
+  },
   "dependencies": {
     "iwebpp.io": "latest",
     "httpp-proxy": "latest",
