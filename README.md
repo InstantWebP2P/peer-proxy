@@ -5,8 +5,8 @@ Proxy web service or website from peer.
 
 ### Features
 
-* Support proxy to local/home http server
-* Partial support proxy to remote website
+* Support proxy to local/home http server, behind firewall/nat
+* Partial support proxy to remote website, behind firewall/nat
 * Support Websocket
 * Secure end-to-end connections
 * Support rewrite location header in 301/302 redirection response
