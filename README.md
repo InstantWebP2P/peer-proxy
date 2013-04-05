@@ -14,8 +14,8 @@ Proxy web service or website from peer.
 
 ### Install
 * npm install peer-proxy
-* peer-proxy depend on iwebpp.io, please make sure iwebpp.io install correctly.
-  https://github.com/InstantWebP2P/iwebpp.io
+* peer-proxy depend on node-httpp, please install node-httpp correctly.
+  https://github.com/InstantWebP2P/node-httpp
 
 ### Usage/API:
 
