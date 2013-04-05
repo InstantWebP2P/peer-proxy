@@ -9,12 +9,12 @@ Proxy web service or website from peer.
 * Partial support proxy to remote website
 * Support Websocket
 * Secure end-to-end connections
-* Generate proxy to 301/302 redirection automatically
-* Generate proxy to href in text/html automatically
+* Support rewrite location header in 301/302 redirection response
+* Support rewrite href in text/html response
 
 ### Install
 * npm install peer-proxy
-* peer-proxy depend on iwebpp.io, please make sure iwebpp.io install well.
+* peer-proxy depend on iwebpp.io, please make sure iwebpp.io install correctly.
   https://github.com/InstantWebP2P/iwebpp.io
 
 ### Usage/API:
@@ -36,7 +36,7 @@ Proxy web service or website from peer.
 
 ### TODO:
 
-* Overwrite text/html href using DOM instead of regex
+* Rewrite href in text/html using DOM instead of regex
 * Proxy via STUN session
 
 <br/>
