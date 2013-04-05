@@ -1,0 +1,47 @@
+#!/usr/bin/env ../node_modules/iwebpp.io/bin/linux32/node
+
+//
+// Please point node above to iwebpp.io/bin/xxx platform-specific executable
+//
+
+var path = require('path'),
+    fs = require('fs'),
+    util  = require('util'),
+    argv = require('optimist').argv,
+    peerProxy = require('../index');
+
+var help = [
+    "usage: peer-proxy [options] ",
+    "",
+    "Starts a peer-proxy server using the specified command-line options",
+    "",
+    "options:",
+    "  --target url0,url1  URL of the server the proxy will target, the multiple URLs separate by comma",
+    "  --user   USER       User to drop privileges once server socket is bound",
+    "  -h, --help          You're staring at it"
+].join('\n');
+
+if (argv.h || argv.help || Object.keys(argv).length === 2) {
+  return util.puts(help);
+}
+
+var target = argv.target,
+    user = argv.user;
+
+//
+// Create the server with the specified options
+//
+var server = new Proxy(target.split(','), function(err, proxyURL){
+        console.log('Website                            Proxy URL(please open it on browser)');
+        for (var k in proxyURL) {
+            console.log(k+'        '+proxyURL[k]);
+        }
+    });
+
+//
+// Drop privileges if requested
+//
+if (typeof user === 'string') {
+    process.setuid(user);
+}
+
