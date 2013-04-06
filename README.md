@@ -9,6 +9,7 @@ Proxy web service or website from peer.
 * Partial support proxy to remote website, behind firewall/nat
 * Support Websocket
 * Secure end-to-end connections
+* Token-based authentication for user's ip
 * Support rewrite location header in 301/302 redirection response
 * Support rewrite href in text/html response
 
