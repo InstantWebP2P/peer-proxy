@@ -41,7 +41,7 @@ if (target) {
         if (t.match(/https?/i)) {
             websites.push(t);
         } else {
-            util.puts('please input correct URL, like http://example.com');
+            websites.push('http://'+t);
         }
     });
     

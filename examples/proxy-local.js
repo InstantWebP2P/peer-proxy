@@ -2,7 +2,7 @@ var Proxy = require('../index');
 var http = require('http');
 
 // create local http server
-var server = htpp.createServer(function(req, res){
+var server = http.createServer(function(req, res){
     res.writeHeader(200);
     res.write('Hello, this is local http server.');
     res.end();
