@@ -42,7 +42,7 @@ Proxy web service or website from peer.
 ### TODO:
 
 * Rewrite href in text/html using DOM instead of regex
-* Proxy via STUN session
+* Enable proxy via STUN session
 
 <br/>
 ### License
