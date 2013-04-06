@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 //
-// Please install node-httpp binary in your system exec dir, like /usr/bin/, /local/usr/bin/
+// Please install node-httpp binary in your system exec dir, like /usr/bin/ or /usr/local/bin/
 //
 
 var path = require('path'),
