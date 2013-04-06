@@ -61,12 +61,12 @@ if (keyword) {
     keyword = keyword.split(',');
 }
 
-var server = new Proxy(websites, function(err, proxyURL, {keyword: keyword}){
+var server = new Proxy(websites, function(err, proxyURL){
         console.log('Website                            Proxy URL(please open it on browser)');
         for (var k in proxyURL) {
             console.log(k+'        '+proxyURL[k]);
         }
-    });
+    }, {keyword: keyword});
 
 //
 // Drop privileges if requested
