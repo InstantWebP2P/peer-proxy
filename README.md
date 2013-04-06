@@ -21,7 +21,7 @@ Proxy web service or website from peer.
 
     1. create proxy-example.js
     var Proxy = require('peer-proxy');
-    var prx = new Proxy(['http://w3schools.com/', 'http://www.google.com.hk/'], function(err, proxyURL){
+    var prx = new Proxy(['http://w3schools.com/', 'http://example.com/'], function(err, proxyURL){
         console.log('Website                            Proxy URL(please open it on browser)');
         for (var k in proxyURL) {
             console.log(k+'        '+proxyURL[k]);
@@ -32,7 +32,7 @@ Proxy web service or website from peer.
        console dump like below:
        Website                            Proxy URL(please open it)
        http://w3schools.com/        https://zfaef294477c5aa14s.fae725b2c0812dc6.vurl.iwebpp.com:51688//vtoken/eb04d54a2f9edd5d
-       http://www.google.com.hk/        https://z7fd8e9e469ef6733s.fae725b2c0812dc6.vurl.iwebpp.com:51688//vtoken/eb04d54a2f9edd5d
+       http://example.com/        https://z7fd8e9e469ef6733s.fae725b2c0812dc6.vurl.iwebpp.com:51688//vtoken/eb04d54a2f9edd5d
        
     3. use peer-proxy binary on Linux, like  ./bin/peer-proxy -t http://example.com
        Website                            Proxy URL(please open it on browser)
