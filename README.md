@@ -39,6 +39,9 @@ Proxy web service or website from peer.
        Website                            Proxy URL(please open it on browser)
        http://example.com        https://zc5a93bdde908a92cs.d4ddf763050ab93e.vurl.iwebpp.com:51688//vtoken/8bb975c3385f47f3
 
+    4. in case the local http server run on localhost with port 3000, do ./bin/peer-proxy -t http://localhost:3000
+       if it's https server on port 3000, do ./bin/peer-proxy -t https://localhost:3000
+
 ### TODO:
 
 * Rewrite href in text/html using DOM instead of regex
