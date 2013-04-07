@@ -14,7 +14,7 @@ Proxy web service or website from peer.
 * Support rewrite href in text/html response
 
 ### Install
-* npm install peer-proxy
+* npm install peer-proxy, or git clone https://github.com/InstantWebP2P/peer-proxy.git && npm install
 * peer-proxy depend on node-httpp, please install node-httpp correctly.
   https://github.com/InstantWebP2P/node-httpp
 
