@@ -17,7 +17,7 @@ var help = [
     "",
     "options:",
     "  -t, --target  http://xxx,https://xxx  URL of the server, the multiple URLs separate by comma",
-    "  -k  --keyword iwebpp,yahoo            Keyword of the server URL, the multiple keywords separate by comma",
+    "  -k  --keyword iwebpp,yahoo            Keyword of the interested server URL, the multiple keywords separate by comma",
     "  -u, --user    USER                    User to drop privileges once server socket is bound",
     "  -h, --help                            You're staring at it"
 ].join('\n');
