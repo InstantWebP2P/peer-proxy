@@ -29,7 +29,7 @@ Proxy web service or website from peer.
         }
     });
     
-    2. launch proxy server by node_modules/iwebpp.io/bin/win32/node.exe proxy-example.js in case Windows32 machine.
+    2. launch proxy server by node-httpp-binary-directory/node.exe proxy-example.js in case Windows machine.
        console dump like below:
        Website                            Proxy URL(please open it)
        http://w3schools.com/        https://zfaef294477c5aa14s.fae725b2c0812dc6.vurl.iwebpp.com:51688//vtoken/eb04d54a2f9edd5d
