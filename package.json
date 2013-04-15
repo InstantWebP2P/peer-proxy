@@ -2,7 +2,7 @@
   "author": "Tom Zhou <zs68j2ee@gmail.com>",
   "name": "peer-proxy",
   "description": "Proxy web service from peer",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "repository": {
     "type": "git",
     "url": "git://github.com/InstantWebP2P/peer-proxy.git"
@@ -20,7 +20,9 @@
     "siphash": "latest",
     "commander": "~1.1.1",
     "optimist": "0.3.x",
-    "connect": "2.7.x"
+    "connect": "2.7.x",
+    "jschardet": "1.0.x",
+    "iconv-lite": "0.2.x"
   },
   "devDependencies": {
     "expect.js": "0.1.x",
