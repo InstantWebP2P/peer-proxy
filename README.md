@@ -6,7 +6,7 @@ Proxy web service or website from peer.
 ### Features
 
 * Support proxy to local/home http server, behind firewall/nat
-* Partial support proxy to remote website, behind firewall/nat
+* Support proxy to remote website, behind firewall/nat
 * Support Websocket
 * Secure end-to-end connections
 * Token-based authentication for user's ip
