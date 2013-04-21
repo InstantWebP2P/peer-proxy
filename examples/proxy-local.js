@@ -11,7 +11,7 @@ var server = http.createServer(function(req, res){
 server.listen(3000);
 console.log('Local http server listening on port 3000');
 
-var proxy = new Proxy(['http://localhost:3000/'], function(err, proxyURL){
+var proxy = new Proxy(['https://localhost:8443/'], function(err, proxyURL){
         console.log('Website                            Proxy URL(please open it on browser)');
         for (var k in proxyURL) {
             console.log(k+'        '+proxyURL[k]);
