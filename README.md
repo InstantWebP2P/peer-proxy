@@ -15,7 +15,7 @@ Proxy web service or website from peer.
 
 ### Install
 * npm install peer-proxy, or git clone https://github.com/InstantWebP2P/peer-proxy.git && cd peer-proxy && npm install
-* peer-proxy depend on node-httpp, please install node-httpp correctly.
+* peer-proxy depend on node-httpp, please npm install httpp-binary.if the binary didn't work, just build it from source:
   https://github.com/InstantWebP2P/node-httpp
 
 ### Usage/API:
