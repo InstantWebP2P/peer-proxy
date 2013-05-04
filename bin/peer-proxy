@@ -17,6 +17,7 @@ var help = [
     "  -t, --target  http://xxx,https://xxx  URL of the server, the multiple URLs separate by comma",
     "  -k  --keyword iwebpp,yahoo            Keyword of the interested server URL, the multiple keywords separate by comma",
     "  -u, --user    USER                    User to drop privileges once server socket is bound",
+    "  -s  --secmode ssl or acl              Secure mode: ssl or host-based ACL",
     "  -h, --help                            You're staring at it"
 ].join('\n');
 
@@ -26,6 +27,7 @@ if (argv.h || argv.help || Object.keys(argv).length === 2) {
 
 var target  = argv.t || argv.target,
     keyword = argv.k || argv.keyword,
+    secmode = argv.s || argv.secmode,
     user    = argv.u || argv.user;
 
 
@@ -64,7 +66,7 @@ var server = new Proxy(websites, function(err, proxyURL){
         for (var k in proxyURL) {
             console.log(k+'        '+proxyURL[k]);
         }
-    }, {keyword: keyword});
+    }, {keyword: keyword, secmode: secmode});
 
 //
 // Drop privileges if requested
