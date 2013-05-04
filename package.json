@@ -22,7 +22,8 @@
     "optimist": "0.3.x",
     "connect": "2.7.x",
     "jschardet": "1.0.x",
-    "iconv-lite": "0.2.x"
+    "iconv-lite": "0.2.x",
+    "trumpet": "0.3.x"
   },
   "devDependencies": {
     "expect.js": "0.1.x",
