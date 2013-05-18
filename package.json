@@ -10,7 +10,9 @@
   "keywords": [
     "peer",
     "p2p",
-    "proxy"
+    "proxy",
+    "http",
+    "httpp"
   ],
   "engines": {
     "node": ">=0.8.0"
