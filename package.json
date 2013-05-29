@@ -31,8 +31,5 @@
     "jschardet": "1.0.x",
     "iconv-lite": "0.2.x",
     "trumpet": "0.3.x"
-  },
-  "devDependencies": {
-    "httpp-binary": "0.0.1"
   }
 }
