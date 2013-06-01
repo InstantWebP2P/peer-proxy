@@ -5,13 +5,13 @@ Proxy web service or website from peer.
 
 ### Features
 
-* Support proxy to local http server, behind firewall/nat
-* Support proxy to remote website, behind firewall/nat
-* Support proxy to Websocket
-* Support secure end-to-end connections
-* Support token-based authentication based on user's IP address
-* Support rewrite location header in 301/302 redirection response
-* Support rewrite href in text/html response
+* Proxy local http server, behind firewall/nat
+* Proxy remote website, behind firewall/nat
+* Proxy Websocket
+* Secure end-to-end connections
+* Token-based authentication based on user's IP address
+* Rewrite location header in 301/302 redirection response
+* Rewrite href in text/html response
 
 ### Install
 * npm install peer-proxy, or git clone https://github.com/InstantWebP2P/peer-proxy.git && cd peer-proxy && npm install
