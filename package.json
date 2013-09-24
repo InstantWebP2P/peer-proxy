@@ -12,7 +12,8 @@
     "p2p",
     "proxy",
     "http",
-    "httpp"
+    "httpp",
+    "webp2p"
   ],
   "engines": {
     "node": ">=0.8.0"
