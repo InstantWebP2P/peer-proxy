@@ -23,7 +23,7 @@
     "peer-proxy": "./bin/peer-proxy"
   },
   "dependencies": {
-    "iwebpp.io": "0.0.18",
+    "iwebpp.io": "latest",
     "httpp-proxy": "latest",
     "siphash": "latest",
     "commander": "~1.1.1",
