@@ -10,8 +10,8 @@ Proxy and Expose web service or website from peer.
 * Proxy Websocket
 * Secure end-to-end connections
 * Token-based authentication based on user's IP address
-* Rewrite location header in 301/302 redirection response
-* Rewrite href in text/html response
+* Rewrite location header in 3XX redirection response
+* Rewrite href in 2XX text/html response
 
 ### Install
 * npm install peer-proxy, or git clone https://github.com/InstantWebP2P/peer-proxy.git && cd peer-proxy && npm install
