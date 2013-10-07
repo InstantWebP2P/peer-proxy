@@ -45,7 +45,7 @@ Proxy and Expose web service or website from peer.
 ### TODO:
 
 * Rewrite href in text/html using DOM instead of regex
-* Enable proxy via STUN session
+* Support Forward Proxy Tunnel
 
 <br/>
 ### License
