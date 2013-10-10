@@ -6,3 +6,4 @@ var srv = new Proxy(['http://www.w3school.com.cn/'], function(err, proxyURL){
             console.log(k+'        '+proxyURL[k]);
         }
     });
+    
