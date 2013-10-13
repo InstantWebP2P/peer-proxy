@@ -8,6 +8,7 @@ Proxy and Expose web service or website from peer.
 * Expose local http server, behind firewall/nat
 * Expose remote website, behind firewall/nat
 * Proxy Websocket
+* Forward proxy tunneling
 * Secure end-to-end connections
 * Token-based authentication based on user's IP address
 * Rewrite location header in 3XX redirection response
@@ -45,7 +46,6 @@ Proxy and Expose web service or website from peer.
 ### TODO:
 
 * Rewrite href in text/html using DOM instead of regex
-* Support Forward Proxy Tunnel
 
 <br/>
 ### License
