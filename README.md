@@ -43,6 +43,9 @@ Reverse Proxy and Expose web service or website from peer.
 
     4. in case the local http server run on localhost with port 3000, do ./bin/peer-proxy -t http://localhost:3000
        if it's https server on port 3000, do ./bin/peer-proxy -t https://localhost:3000
+       
+    5. run over STUN with iwebpp.io-stun-proxy, just embed 'local.' as sub-domain in origin vURL, 
+       like https://zc5a93bdde908a92cs.d4ddf763050ab93e.vurl.local.iwebpp.com:51688//vtoken/8bb975c3385f47f3
 
 ### TODO:
 
