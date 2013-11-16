@@ -1,7 +1,7 @@
 #peer-proxy
 ===============
 
-Proxy and Expose web service or website from peer.
+Reverse Proxy and Expose web service or website from peer.
 
 ### Features
 
