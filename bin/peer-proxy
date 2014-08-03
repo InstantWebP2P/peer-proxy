@@ -14,21 +14,23 @@ var help = [
     "Starts a peer-proxy server using the specified command-line options",
     "",
     "options:",
-    "  -t, --target  http://xxx,https://xxx  URL of the server, the multiple URLs separate by comma",
-    "  -s  --secmode ssl or acl              Secure mode: ssl or host-based ACL",
-    "  -k, --key     User key                Key for the registered user",
-    "  -u, --user    USER                    User to drop privileges once server socket is bound",
-    "  -h, --help                            You're staring at it"
+    "  -t, --target   http://xxx,https://xxx  URL of the server, the multiple URLs separate by comma",
+    "  -s  --secmode  ssl or acl              Secure mode: ssl or host-based ACL",
+    "  -a  --authmode srv or both             SSL auth mode: srv or both",
+    "  -k, --key      User key                Key for the registered user",
+    "  -u, --user     USER                    User to drop privileges once server socket is bound",
+    "  -h, --help                             You're staring at it"
 ].join('\n');
 
 if (argv.h || argv.help || Object.keys(argv).length === 2) {
   return util.puts(help);
 }
 
-var target  = argv.t || argv.target,
-    secmode = argv.s || argv.secmode,
-    user    = argv.u || argv.user,
-    usrkey  = argv.k || argv.key;
+var target   = argv.t || argv.target,
+    secmode  = argv.s || argv.secmode,
+    authmode = argv.a || argv.authmode,
+    user     = argv.u || argv.user,
+    usrkey   = argv.k || argv.key;
 
 
 // 
@@ -63,7 +65,7 @@ var server = new Proxy(websites, function(err, proxyURL){
         for (var k in proxyURL) {
             console.log(k+'        '+proxyURL[k]);
         }
-    }, {secmode: secmode, usrkey: usrkey});
+    }, {secmode: secmode, usrkey: usrkey, sslmode: authmode});
 
 //
 // Drop privileges if requested
