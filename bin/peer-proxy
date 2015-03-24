@@ -18,6 +18,7 @@ var help = [
     "  -s  --secmode  ssl or acl              Secure mode: ssl or host-based ACL",
     "  -a  --authmode srv or both             SSL auth mode: srv or both",
     "  -k, --key      User key                Key for the registered user",
+    "  -l, --level    srv or both             proxy level: srv or both server and web site",
     "  -u, --user     USER                    User to drop privileges once server socket is bound",
     "  -h, --help                             You're staring at it"
 ].join('\n');
@@ -30,7 +31,8 @@ var target   = argv.t || argv.target,
     secmode  = argv.s || argv.secmode,
     authmode = argv.a || argv.authmode,
     user     = argv.u || argv.user,
-    usrkey   = argv.k || argv.key;
+    usrkey   = argv.k || argv.key,
+    level    = argv.l || argv.level;
 
 
 // 
@@ -65,7 +67,7 @@ var server = new Proxy(websites, function(err, proxyURL){
         for (var k in proxyURL) {
             console.log(k+'        '+proxyURL[k]);
         }
-    }, {secmode: secmode, usrkey: usrkey, sslmode: authmode});
+    }, {secmode: secmode, usrkey: usrkey, sslmode: authmode, level: level});
 
 //
 // Drop privileges if requested
