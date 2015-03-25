@@ -14,6 +14,7 @@ Reverse Proxy and Expose web service or website from peer.
 * Rewrite location header in 3XX redirection response
 * Rewrite href in 2XX text/html response
 * Run over STUN session with iwebpp.io-stun-proxy
+* Proxy web server dynamically on fly
 
 ### Install
 * npm install peer-proxy, or git clone https://github.com/InstantWebP2P/peer-proxy.git && cd peer-proxy && npm install
