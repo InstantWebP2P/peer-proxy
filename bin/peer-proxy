@@ -19,6 +19,7 @@ var help = [
     "  -a  --authmode srv or both             SSL auth mode: srv or both",
     "  -k, --key      User key                Key for the registered user",
     "  -l, --level    srv or both             proxy level: srv or both server and web site",
+    "  -b  --basicauth user:pass              Http basic-auth as username:password",
     "  -u, --user     USER                    User to drop privileges once server socket is bound",
     "  -h, --help                             You're staring at it"
 ].join('\n');
@@ -27,12 +28,13 @@ if (argv.h || argv.help || Object.keys(argv).length === 2) {
   return util.puts(help);
 }
 
-var target   = argv.t || argv.target,
-    secmode  = argv.s || argv.secmode,
-    authmode = argv.a || argv.authmode,
-    user     = argv.u || argv.user,
-    usrkey   = argv.k || argv.key,
-    level    = argv.l || argv.level;
+var target    = argv.t || argv.target,
+    secmode   = argv.s || argv.secmode,
+    authmode  = argv.a || argv.authmode,
+    user      = argv.u || argv.user,
+    basicauth = argv.b || argv.basicauth,
+    level     = argv.l || argv.level,
+    usrkey    = argv.k || argv.key;
 
 
 // 
@@ -58,16 +60,25 @@ if (target) {
     return util.puts(help);
 }
 
+if (!basicauth) {
+	console.log('Warning: Please set http auth with -b username:password');
+}
+
 //
 // Create the server with the specified options
 //
 
 var server = new Proxy(websites, function(err, proxyURL){
-        console.log('Website                            Proxy URL(please open it on browser)');
-        for (var k in proxyURL) {
-            console.log(k+'        '+proxyURL[k]);
-        }
-    }, {secmode: secmode, usrkey: usrkey, sslmode: authmode, level: level});
+	console.log('Website                            Proxy URL(please open it on browser)');
+	for (var k in proxyURL) {
+		console.log(k+'        '+proxyURL[k]);
+	}
+}, 
+{
+	secmode: secmode, usrkey: usrkey, 
+	sslmode: authmode, level: level,
+	   auth: basicauth
+});
 
 //
 // Drop privileges if requested
