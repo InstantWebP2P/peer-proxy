@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Peer-proxy by InstantWebP2P</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Peer-proxy</h1>
+      <h2 class="project-tagline">Light on hidden web service - Reverse Proxy and Expose web service or website from peer</h2>
+      <a href="https://github.com/InstantWebP2P/peer-proxy" class="btn">View on GitHub</a>
+      <a href="https://github.com/InstantWebP2P/peer-proxy/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/InstantWebP2P/peer-proxy/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="peer-proxy" class="anchor" href="#peer-proxy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>peer-proxy</h1>
+
+<h1></h1>
+
+<p>Reverse Proxy and Expose web service or website from peer.</p>
+
+<h3>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
+
+<ul>
+<li>Expose local http server, behind firewall/nat</li>
+<li>Expose remote website, behind firewall/nat</li>
+<li>Proxy Websocket</li>
+<li>Forward proxy tunneling</li>
+<li>Secure end-to-end connections</li>
+<li>Token-based authentication based on user's IP address</li>
+<li>Rewrite location header in 3XX redirection response</li>
+<li>Rewrite href in 2XX text/html response</li>
+<li>Run over STUN session with iwebpp.io-stun-proxy</li>
+<li>Proxy web server dynamically on fly</li>
+<li>Http basic-auth support</li>
+</ul>
+
+<h3>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h3>
+
+<ul>
+<li>npm install peer-proxy, or git clone <a href="https://github.com/InstantWebP2P/peer-proxy.git">https://github.com/InstantWebP2P/peer-proxy.git</a> &amp;&amp; cd peer-proxy &amp;&amp; npm install</li>
+<li>peer-proxy depend on node-httpp, please npm install httpp-binary.if the binary didn't work, just build it from source:
+<a href="https://github.com/InstantWebP2P/node-httpp">https://github.com/InstantWebP2P/node-httpp</a>
+</li>
+</ul>
+
+<h3>
+<a id="usageapi" class="anchor" href="#usageapi" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage/API:</h3>
+
+<pre><code>1. create proxy-example.js
+var Proxy = require('peer-proxy');
+var prx = new Proxy(['http://w3schools.com/', 'http://example.com/'], function(err, proxyURL){
+    console.log('Website                            Proxy URL(please open it on browser)');
+    for (var k in proxyURL) {
+        console.log(k+'        '+proxyURL[k]);
+    }
+});
+
+2. launch proxy server by node-httpp-binary-directory/node.exe proxy-example.js in case Windows machine.
+   console dump like below:
+   Website                            Proxy URL(please open it)
+   http://w3schools.com/        https://zfaef294477c5aa14s.fae725b2c0812dc6.vurl.iwebpp.com:51688//vtoken/eb04d54a2f9edd5d
+   http://example.com/        https://z7fd8e9e469ef6733s.fae725b2c0812dc6.vurl.iwebpp.com:51688//vtoken/eb04d54a2f9edd5d
+
+3. use peer-proxy binary on Linux, like  ./bin/peer-proxy -t http://example.com
+   Website                            Proxy URL(please open it on browser)
+   http://example.com        https://zc5a93bdde908a92cs.d4ddf763050ab93e.vurl.iwebpp.com:51688//vtoken/8bb975c3385f47f3
+
+4. in case the local http server run on localhost with port 3000, do ./bin/peer-proxy -t http://localhost:3000
+   if it's https server on port 3000, do ./bin/peer-proxy -t https://localhost:3000
+
+5. run over STUN with iwebpp.io-stun-proxy, just embed 'vlocal.' as sub-domain in origin vURL, 
+   like https://zc5a93bdde908a92cs.d4ddf763050ab93e.vurl.vlocal.iwebpp.com:51688//vtoken/8bb975c3385f47f3
+</code></pre>
+
+<h3>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TODO:</h3>
+
+<ul>
+<li>Rewrite href in text/html using DOM instead of regex</li>
+</ul>
+
+<p><br></p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
+
+<p>(The MIT License)</p>
+
+<p>Copyright (c) 2012-2013 Tom Zhou(<a href="mailto:iwebpp@gmail.com">iwebpp@gmail.com</a>)</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/InstantWebP2P/peer-proxy">Peer-proxy</a> is maintained by <a href="https://github.com/InstantWebP2P">InstantWebP2P</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
