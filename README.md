@@ -53,6 +53,14 @@ Expose Web Service from Peer
 
 * Rewrite href in text/html using DOM instead of regex
 
+
+### Support us
+
+* scan QRcode to follow our WeChat(云瓜桌面) 
+* ![云瓜云](../master/cloudgua.jpg)
+* 远程工作云办公联盟 QQ 群号: 463651269
+
+
 <br/>
 ### License
 
