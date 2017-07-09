@@ -2,7 +2,7 @@
   "author": "Tom Zhou <iwebpp@gmail.com>",
   "name": "peer-proxy",
   "description": "Proxy web service from peer",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/InstantWebP2P/peer-proxy.git"
