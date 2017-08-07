@@ -1,4 +1,4 @@
-#peer-proxy
+peer-proxy
 ===============
 
 Expose Web Service from Peer
