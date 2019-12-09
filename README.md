@@ -18,9 +18,8 @@ Expose Web Service from Peer
 * Http basic-auth support
 
 ### Install
-* npm install peer-proxy, or git clone https://github.com/InstantWebP2P/peer-proxy.git && cd peer-proxy && npm install
-* peer-proxy depend on node-httpp, please npm install httpp-binary.if the binary didn't work, just build it from source:
-  https://github.com/InstantWebP2P/node-httpp
+* npm install peer-proxy, or git clone [peer-proxy](https://github.com/InstantWebP2P/peer-proxy.git) && cd peer-proxy && npm install
+* peer-proxy depend on node-httpp, please npm install httpp-binary.if the binary didn't work, just build it from [node-httpp repo](https://github.com/InstantWebP2P/node-httpp)
 
 ### Usage/API:
 
