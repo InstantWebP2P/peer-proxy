@@ -2,7 +2,7 @@
   "author": "Tom Zhou <iwebpp@gmail.com> (https://aiworkspace.com)",
   "name": "peer-proxy",
   "description": "Proxy web service from peer",
-  "version": "3.2.1",
+  "version": "3.3.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/InstantWebP2P/peer-proxy.git"
@@ -23,7 +23,7 @@
     "peer-proxy": "./bin/peer-proxy"
   },
   "dependencies": {
-    "iwebpp.io": "latest",
+    "appnet.io": "latest",
     "httpp-proxy": "latest",
     "siphash": "latest",
     "commander": "~1.1.1",
