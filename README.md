@@ -20,7 +20,7 @@ Expose Web Service from Peer
 ### Install
 * npm install peer-proxy, or git clone [peer-proxy](https://github.com/InstantWebP2P/peer-proxy.git) && cd peer-proxy && npm install
 * peer-proxy depend on node-httpp, please build it from repo [node-httpp](https://github.com/InstantWebP2P/node-httpp)
-* setup your own iWebPP.io backend controller services refer to [iWebPP.io-controller](https://github.com/InstantWebP2P/iwebpp.io-controller)
+* setup your own iWebPP.io backend controller services refer to [AppNet.io-controller](https://github.com/InstantWebP2P/appnet.io-controller)
 
 ### Usage/API:
 
