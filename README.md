@@ -13,14 +13,14 @@ Expose Web Service from Peer
 * Token-based authentication based on user's IP address
 * Rewrite location header in 3XX redirection response
 * Rewrite href in 2XX text/html response
-* Run over STUN session with iwebpp.io-stun-proxy
+* Run over STUN session with appnet.io-stun-proxy
 * Proxy web server dynamically on fly
 * Http basic-auth support
 
 ### Install
 * npm install peer-proxy, or git clone [peer-proxy](https://github.com/InstantWebP2P/peer-proxy.git) && cd peer-proxy && npm install
 * peer-proxy depend on node-httpp, please build it from repo [node-httpp](https://github.com/InstantWebP2P/node-httpp)
-* setup your own iWebPP.io backend controller services refer to [AppNet.io-controller](https://github.com/InstantWebP2P/appnet.io-controller)
+* setup your own AppNet.io backend controller services refer to [AppNet.io-controller](https://github.com/InstantWebP2P/appnet.io-controller)
 
 ### Usage/API:
 
@@ -46,7 +46,7 @@ Expose Web Service from Peer
     4. in case the local http server run on localhost with port 3000, do ./bin/peer-proxy -t http://localhost:3000
        if it's https server on port 3000, do ./bin/peer-proxy -t https://localhost:3000
        
-    5. run over STUN with iwebpp.io-stun-proxy, just embed 'vlocal.' as sub-domain in origin vURL, 
+    5. run over STUN with appnet.io-stun-proxy, just embed 'vlocal.' as sub-domain in origin vURL, 
        like https://zc5a93bdde908a92cs.d4ddf763050ab93e.vurl.vlocal.51dese.com:51688//vtoken/8bb975c3385f47f3
 
 ### TODO:
@@ -64,7 +64,7 @@ Expose Web Service from Peer
 
 (The MIT License)
 
-Copyright (c) 2012-present Tom Zhou(iwebpp@gmail.com)
+Copyright (c) 2012-present Tom Zhou(appnet.link@gmail.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
