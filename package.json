@@ -23,8 +23,8 @@
     "peer-proxy": "./bin/peer-proxy"
   },
   "dependencies": {
-    "appnet.io": "latest",
-    "httpp-proxy": "latest",
+    "appnet.io": "3.3.6",
+    "httpp-proxy": "0.10.3",
     "siphash": "latest",
     "commander": "~1.1.1",
     "optimist": "0.3.x",
