@@ -2,7 +2,7 @@
   "author": "Tom Zhou <appnet.link@gmail.com> (https://appnet.link)",
   "name": "peer-proxy",
   "description": "Proxy web service from peer",
-  "version": "3.3.2",
+  "version": "3.3.3",
   "repository": {
     "type": "git",
     "url": "git://github.com/InstantWebP2P/peer-proxy.git"
@@ -16,14 +16,14 @@
     "webp2p"
   ],
   "engines": {
-    "node": ">=0.8.0"
+    "node": "0.8.x"
   },
   "main": "index",
   "bin": {
     "peer-proxy": "./bin/peer-proxy"
   },
   "dependencies": {
-    "appnet.io": "3.3.6",
+    "appnet.io": "3.3.7",
     "httpp-proxy": "0.10.3",
     "siphash": "latest",
     "commander": "~1.1.1",
