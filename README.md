@@ -19,8 +19,8 @@ Expose Web Service from Peer
 
 ### Install
 * npm install peer-proxy, or git clone [peer-proxy](https://github.com/InstantWebP2P/peer-proxy.git) && cd peer-proxy && npm install
-* peer-proxy depend on node-httpp, please build it from repo [node-httpp](https://github.com/InstantWebP2P/node-httpp)
-* setup your own AppNet.io backend controller services refer to [AppNet.io-controller](https://github.com/InstantWebP2P/appnet.io-controller)
+* peer-proxy depend on node-httpp, please build it from repo [nodejs-httpp](https://github.com/InstantWebP2P/nodejs-httpp)
+* setup your own AppNet.io backend controller services refer to [AppNet.link-controller](https://github.com/InstantWebP2P/appnet.link-controller)
 
 ### Usage/API:
 
