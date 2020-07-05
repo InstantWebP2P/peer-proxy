@@ -1,7 +1,7 @@
 peer-proxy
 ===============
 
-Expose Web Service from Peer
+Expose web service from Peer even behind NAT/FW
 
 ### Features
 
